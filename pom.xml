@@ -4,15 +4,17 @@
     <parent>
         <groupId>uk.gov.moj.cpp.common</groupId>
         <artifactId>parent-pom</artifactId>
-        <version>21.0.0-M1-SNAPSHOT</version>
+        <version>25.104.0-M1</version>
     </parent>
 
     <artifactId>service-common-resources</artifactId>
-    <version>21.0.0-M1-SNAPSHOT</version>
+    <version>25.104.0-M1-SNAPSHOT</version>
     <name>CPP Service Common Resources</name>
     <packaging>jar</packaging>
 
     <properties>
+        <!-- 0.8.12 (parent-pom M1) cannot instrument Java 25 class files (major version 69); override until parent-pom M2 -->
+        <plugins.jacoco.version>0.8.14</plugins.jacoco.version>
         <cpp.scm.connection>scm:git:${gerrit.scm.url}/cpp.platform.maven.service-common-resources
         </cpp.scm.connection>
         <cpp.scm.url>${gerrit.web.url}/cpp.platform.maven.service-common-resources</cpp.scm.url>
